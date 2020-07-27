@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MedicosService } from '../../services/medicos.service';
 import { Observable } from 'rxjs';
 import { Medico } from '../../model/medico';
-import { data } from 'jquery';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-crear-medico',
@@ -11,19 +11,13 @@ import { data } from 'jquery';
 })
 export class CrearMedicoPage implements OnInit {
 
-  constructor(private medicosService: MedicosService) { }
-
   medico: Medico = new Medico();
+  constructor(private medicosService: MedicosService,
+    private toastController: ToastController) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  crearMedico(){
-    this.medicosService.sendMedico(this.medico).subscribe(data =>{
-      console.log(data);
-      if(data.code='1')
-        this.toast("Guardado Satisfactorio");
-    });
+  cerarMedico() {
   }
 
 }

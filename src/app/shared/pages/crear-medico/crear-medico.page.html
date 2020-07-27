@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>crear-medico</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>crear-medico</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+    <ion-list>
+
+        <ion-item>
+            <ion-label>Cédula:</ion-label>
+            <ion-label required type='text' [(ngModel)]='medico.cedula'></ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Nombre:</ion-label>
+            <ion-label required type='text' [(ngModel)]='medico.nombres'></ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Dirección:</ion-label>
+            <ion-label required type='text' [(ngModel)]='medico.direccion'></ion-label>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-button type='submit' (click)='crearMedico()'>Crear Médico</ion-button>
 </ion-content>
