@@ -17,7 +17,20 @@ export class CrearMedicoPage implements OnInit {
 
   ngOnInit() {}
 
-  cerarMedico() {
+  crearMedico() {
+    this.medicosService.sendMedico(this.medico).subscribe(data => {
+      console.log(data);
+      if (data.code = '1')
+        this.toast('Médico creado exitosamente');
+    })
+  }
+
+  async toast(text: string, duration: number = 200, position?) {
+    const toast = await this.toastController.create({
+      message: text,
+      position: position || 'middle',
+      duration: duration
+    });
   }
 
 }
