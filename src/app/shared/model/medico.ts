@@ -1,5 +1,5 @@
 export class Medico{
     public cedula: string;
-    public nombre: string;
+    public nombres: string;
     public direccion: string;
 }
