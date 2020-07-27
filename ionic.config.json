@@ -1,0 +1,7 @@
+{
+  "name": "medicos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
