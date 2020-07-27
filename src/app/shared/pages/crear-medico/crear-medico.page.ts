@@ -17,13 +17,13 @@ export class CrearMedicoPage implements OnInit {
 
   ngOnInit() {
   }
-/*
+
   crearMedico(){
     this.medicosService.sendMedico(this.medico).subscribe(data =>{
       console.log(data);
       if(data.code='1')
         this.toast("Guardado Satisfactorio");
     });
-  }*/
+  }
 
 }
