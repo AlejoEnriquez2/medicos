@@ -12,6 +12,7 @@ import { ToastController } from '@ionic/angular';
 export class CrearMedicoPage implements OnInit {
 
   medico: Medico = new Medico();
+  
   constructor(private medicosService: MedicosService,
     private toastController: ToastController) { }
 
