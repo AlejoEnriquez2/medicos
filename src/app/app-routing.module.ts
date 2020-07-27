@@ -17,7 +17,8 @@ const routes: Routes = [
   {
     path: 'medico',
     loadChildren: () => import('./shared/pages/medico/medico.module').then( m => m.MedicoPageModule)
-  },  {
+  },
+  {
     path: 'editar-medico',
     loadChildren: () => import('./shared/pages/editar-medico/editar-medico.module').then( m => m.EditarMedicoPageModule)
   }
