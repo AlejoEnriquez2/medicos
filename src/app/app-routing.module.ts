@@ -5,6 +5,18 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'listar-medicos',
+    loadChildren: () => import('./shared/pages/listar-medicos/listar-medicos.module').then( m => m.ListarMedicosPageModule)
+  },
+  {
+    path: 'crear-medico',
+    loadChildren: () => import('./shared/pages/crear-medico/crear-medico.module').then( m => m.CrearMedicoPageModule)
+  },
+  {
+    path: 'medico',
+    loadChildren: () => import('./shared/pages/medico/medico.module').then( m => m.MedicoPageModule)
   }
 ];
 @NgModule({
