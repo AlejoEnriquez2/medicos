@@ -5,5 +5,13 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list id="lista1">
+    <ion-item *ngFor="let medico of medicos | async">
+      <ion-label>
+        <h2>{{medico.cedula}}</h2>
+        <h2>{{medico.nombre}}</h2>
+        <p>{{medico.direccion}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

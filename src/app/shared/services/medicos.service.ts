@@ -19,7 +19,7 @@ export class MedicosService {
     return this.http.post<Respuesta>(this.SEND_MEDICO_URL, medico);
   }
 
-  getMedico(): Observable<any[]>{
+  getMedicos(): Observable<any[]>{
     return this.http.get<Medico[]>(this.GET_MEDICO_URL);
   }
 }

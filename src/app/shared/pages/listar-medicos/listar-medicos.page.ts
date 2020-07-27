@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MedicosService } from '../../services/medicos.service';
+import { Medico } from '../../model/medico';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-listar-medicos',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarMedicosPage implements OnInit {
 
-  constructor() { }
+  constructor(private medicosService: MedicosService) { }
+
+  medicos: Observable<Medico[]>;
 
   ngOnInit() {
+    this.medicos = this.medicosService.getMedicos();
   }
 
 }
